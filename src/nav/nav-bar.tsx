@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Flex } from "@chakra-ui/react"
 
-const NavBar: React.FC = ({ children }) => {
+const NavBar: FC = ({ children }) => {
     return (
         <Flex
             as="nav"

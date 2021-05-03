@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, FC } from 'react'
 import { Link, Flex } from "@chakra-ui/react"
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
@@ -7,36 +7,41 @@ const navListItem = {
     flex: 1,
     height: "100%",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    "&.first-child": {
+        borderLeft: "1px solid",
+        borderLeftColor: "gray.200",
+    }
 }
 
 const navListItemLink = {
     fontWeight: "semibold",
-    fontSize: "md",
-    // textTransform: "uppercase",
+    fontSize: "sm",
+    textTransform: "uppercase",
+    textAlign: "center"
 }
 
-const NavLinks: React.FC = () => {
+const NavLinks: FC = () => {
     return (
         <>
             <Flex
                 as="li"
-                sx={{
-                    ...navListItem,
-                    borderLeft: "1px solid",
-                    borderLeftColor: "gray.100",
-                }}
+                sx={navListItem}
+                className='first-child'
             >
-                <Link sx={navListItemLink} key="a" href="#">Food</Link><ChevronDownIcon />
+                <Link sx={navListItemLink} key="a" href="#">Departments</Link><ChevronDownIcon />
             </Flex>
             <Flex as="li" sx={navListItem}>
-                <Link sx={navListItemLink} key="b" href="#">Apparell</Link><ChevronDownIcon />
+                <Link sx={navListItemLink} key="b" href="#">Featured</Link><ChevronDownIcon />
             </Flex>
             <Flex as="li" sx={navListItem}>
-                <Link sx={navListItemLink} key="c" href="#">Home</Link><ChevronDownIcon />
+                <Link sx={navListItemLink} key="c" href="#">My Shop</Link><ChevronDownIcon />
             </Flex>
             <Flex as="li" sx={navListItem}>
-                <Link sx={navListItemLink} key="d" href="#">Services</Link><ChevronDownIcon />
+                <Link sx={navListItemLink} key="d" href="#">Flyers & Deals</Link><ChevronDownIcon />
+            </Flex>
+            <Flex as="li" sx={navListItem}>
+                <Link sx={navListItemLink} key="e" href="#">Services</Link><ChevronDownIcon />
             </Flex>
         </>
     )
