@@ -4,7 +4,8 @@ import {
   theme,
 } from "@chakra-ui/react";
 import { NavBar, Notifications, Menu } from './nav';
-import HeroBannerContainer from "./hero-banner/hero-banner-container";
+import { HeroBannerContainer, HeroSection } from "./hero-banner";
+import { CouponSection } from "./hero-banner/coupon-section/coupon-section";
 // import { ColorModeSwitcher } from "./ColorModeSwitcher"
 
 // <ColorModeSwitcher justifySelf="flex-end" />
@@ -15,6 +16,12 @@ export const App = () => (
       <Menu />
       <Notifications />
     </NavBar>
-    <HeroBannerContainer />
+    <HeroBannerContainer>
+      <HeroSection backgroundColor="#ffe9e9">
+        <CouponSection />
+      </HeroSection>
+      <HeroSection backgroundColor="#e9efff" />
+      <HeroSection backgroundColor="#fff7e9" />
+    </HeroBannerContainer>
   </ChakraProvider >
 )

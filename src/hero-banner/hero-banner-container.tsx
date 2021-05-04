@@ -1,19 +1,18 @@
-import React, { FC } from 'react'
-import { Flex } from "@chakra-ui/react"
+import React, { FC } from 'react';
+import { Grid } from "@chakra-ui/react";
 
 const HeroBannerContainer: FC = ({ children }) => {
     return (
-        <Flex
-            as="div"
+        <Grid
             sx={{
-                height: "300px",
-                borderBottom: "1px solid",
-                borderColor: "gray.200",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                height: "400px",
+                backgroundColor: "gray.100"
             }}
         >
             {children}
-        </Flex>
+        </Grid>
     )
-}
+};
 
-export default HeroBannerContainer
+export default HeroBannerContainer;

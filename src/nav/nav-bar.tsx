@@ -7,8 +7,8 @@ const NavBar: FC = ({ children }) => {
             as="nav"
             sx={{
                 height: "60px",
-                borderBottom: "1px solid",
-                borderBottomColor: "gray.200",
+                // borderBottom: "1px solid",
+                // borderBottomColor: "gray.200",
                 borderTop: "5px solid",
                 borderTopColor: "#f78e1c",
                 justifyContent: "space-between"
