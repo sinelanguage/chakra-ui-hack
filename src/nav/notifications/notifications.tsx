@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Flex } from "@chakra-ui/react"
+import { Flex, Box } from "@chakra-ui/react"
 import { BellIcon, EditIcon } from '@chakra-ui/icons'
 
 const notificationItem = {
@@ -25,7 +25,7 @@ const Notifications: FC = ({ children }) => {
                 borderLeftColor: "gray.200"
             }}
         >
-            <Flex
+            {/* <Flex
                 as="li"
                 sx={notificationItem}
             >
@@ -36,7 +36,7 @@ const Notifications: FC = ({ children }) => {
                     }}
                 >
                     Your order will be ready in:
-          </Flex>
+                </Flex>
                 <Flex
                     as="p"
                     sx={{
@@ -51,39 +51,42 @@ const Notifications: FC = ({ children }) => {
                             mr: 1,
                         }}
                     />
-            3 days / 5 hours
-          </Flex>
-            </Flex>
+                    3 days / 5 hours
+                </Flex>
+            </Flex> */}
             <Flex
-                as="li"
-                sx={notificationItem}
+                as="ul"
             >
                 <Flex
-                    as="p"
-                    sx={{
-                        fontSize: "xs"
-                    }}
+                    as="li"
+                    sx={notificationItem}
                 >
-                    You have items in your cart
-            </Flex>
-                <Flex
-                    as="p"
-                    sx={{
-                        fontSize: "sm",
-                        fontWeight: "bold"
-                    }}
-                >
-                    <BellIcon
-                        w={4}
-                        h={4}
+                    <Flex
+                        as="p"
                         sx={{
-                            mr: 1,
+                            fontSize: "xs"
                         }}
-                    />
-              5 items / Total: $75.87
-            </Flex>
-            </Flex>
-            <Flex
+                    >
+                        You have items in your cart
+                    </Flex>
+                    <Flex
+                        as="p"
+                        sx={{
+                            fontSize: "sm",
+                            fontWeight: "bold"
+                        }}
+                    >
+                        <BellIcon
+                            w={4}
+                            h={4}
+                            sx={{
+                                mr: 1,
+                            }}
+                        />
+                        5 items / Total: $75.87
+                    </Flex>
+                </Flex>
+           {/*  <Flex
                 as="li"
                 sx={notificationItem}
             >
@@ -111,6 +114,7 @@ const Notifications: FC = ({ children }) => {
                     />
               Milk, Eggs, Strawberries
           </Flex>
+            </Flex> */}
             </Flex>
         </Flex>
     )

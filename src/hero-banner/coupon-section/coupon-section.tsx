@@ -9,7 +9,8 @@ const CouponGrid: FC = ({ children }) => (
         <Grid
             sx={{
                 gridTemplateColumns: "repeat(3, 1fr)",
-                gridTemplateRows: "repeat(3, 1fr)"
+                gridTemplateRows: "repeat(3, 1fr)",
+                height: "400px",
             }}
         >
             { children }
@@ -27,7 +28,7 @@ const Coupon: FC<ICouponProps> = (
                 backgroundColor,
                 borderBottom: "1px solid",
                 borderLeft: "1px solid",
-                borderColor: "black",
+                borderColor: "#ffcece",
             }}
         >
             {children}
