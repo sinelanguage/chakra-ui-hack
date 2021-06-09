@@ -13,7 +13,7 @@ const CouponGrid: FC = ({ children }) => (
                 height: "400px",
             }}
         >
-            { children }
+            {children}
         </Grid>
     );
 

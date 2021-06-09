@@ -8,10 +8,7 @@ const navListItem = {
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    "&.first-child": {
-        borderLeft: "1px solid",
-        borderLeftColor: "gray.200",
-    }
+    
 }
 
 const navListItemLink = {
@@ -27,7 +24,6 @@ const NavLinks: FC = () => {
             <Flex
                 as="li"
                 sx={navListItem}
-                className='first-child'
             >
                 <Link sx={navListItemLink} key="a" href="#">Departments</Link><ChevronDownIcon />
             </Flex>
